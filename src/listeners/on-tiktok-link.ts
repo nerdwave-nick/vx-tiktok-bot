@@ -14,7 +14,11 @@ export class IiktokListener extends Listener {
         if (message.guild === null) return;
         const text = message.content;
         if (text.includes("vm.tiktok.com")) {
-            message.suppressEmbeds(true);
+            try {
+                message.suppressEmbeds(true);
+            } catch (e) {
+                this.container.logger.error(e);
+            }
             const newtext = text.replace(/https:\/\/vm.tiktok.com\/(.*)\//g, `https://vm.vxtiktok.com/$1`);
             await message.reply({ allowedMentions: { repliedUser: false }, content: newtext })
         }
