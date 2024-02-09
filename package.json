@@ -1,0 +1,17 @@
+{
+  "name": "vx-tiktok-bot",
+  "module": "src/index.ts",
+  "main": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@sapphire/framework": "^5.0.7",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.1"
+  }
+}
