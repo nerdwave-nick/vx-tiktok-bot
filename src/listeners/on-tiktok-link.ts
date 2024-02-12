@@ -2,7 +2,7 @@
 import { Events, Listener } from '@sapphire/framework';
 import type { Message } from 'discord.js';
 
-const mobileregex = /https:\/\/vm\.tiktok\.com\/(.*)\//g // /https:\/\/vm.tiktok.com\/(.*)\//g
+const mobileregex = /https:\/\/vm\.tiktok\.com\/(.*)\//g
 const desktopregex = /https:\/\/(?:www\.)?tiktok\.com\/(@[a-z]+)\/video\/([0-9]*)/g
 
 export class IiktokListener extends Listener {
